@@ -1,12 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="net.onlainez.zoo" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Zoo</name>
+    <icon src="icon.png" />
     <description>
-        Animal Sounds.
+        Animals Sounds For My Daughters.
     </description>
     <author email="support@onlainez.net" href="http://onlainez.net">
         Onlainez Solutions Team
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="14" />
 </widget>

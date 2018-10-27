@@ -3,7 +3,7 @@
     <name>Zoo</name>
     <icon src="icon.png" />
     <description>
-        Animal Sounds.
+        Animals Sounds For My Daughters.
     </description>
     <author email="support@onlainez.net" href="http://onlainez.net">
         Onlainez Solutions Team
@@ -11,8 +11,6 @@
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
-	<plugin name="cordova-plugin-media" spec="~5.0.2" />
-    <plugin name="cordova-plugin-device" spec="cordova-plugin-device" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />

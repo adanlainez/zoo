@@ -4,8 +4,14 @@
   "name": "Zoo",
   "short_name": "Zoo",
   "version": "net.onlainez.zoo",
-  "description": "Animal Sounds.",
+  "description": "Animals Sounds For My Daughters.",
   "author": "Onlainez Solutions Team",
-  "icons": [],
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "undefinedxundefined"
+    }
+  ],
   "start_url": "index.html"
 }

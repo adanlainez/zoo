@@ -6,17 +6,6 @@
   "config_munge": {
     "files": {}
   },
-  "installed_plugins": {
-    "cordova-plugin-media": {
-      "PACKAGE_NAME": "net.onlainez.zoo"
-    },
-    "cordova-plugin-device": {
-      "PACKAGE_NAME": "net.onlainez.zoo"
-    }
-  },
-  "dependent_plugins": {
-    "cordova-plugin-file": {
-      "PACKAGE_NAME": "net.onlainez.zoo"
-    }
-  }
+  "installed_plugins": {},
+  "dependent_plugins": {}
 }
