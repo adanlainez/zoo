@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Zoo",
+  "short_name": "Zoo",
+  "version": "net.onlainez.zoo",
+  "description": "Animal Sounds.",
+  "author": "Onlainez Solutions Team",
+  "icons": [],
+  "start_url": "index.html"
+}
