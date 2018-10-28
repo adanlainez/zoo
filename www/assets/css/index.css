@@ -286,7 +286,7 @@ button:focus {
 .loaded .ip-logo svg path {
 	-webkit-transition: all 0.5s ease 0.3s;
 	transition: all 0.5s ease 0.3s;
-	fill: #6283fd;
+	fill: #fd62ec;
 }
 
 /* Header animation when loading finishes */

@@ -1,3 +1,16 @@
+
+	function listenFn(file) {
+	    var player = document.getElementById("player");
+	    player.src = "animals/sounds/" + file + ".mp3";
+	    player.load();
+	    player.play();
+	}
+	function stopFn(file) {
+		var player = document.getElementById("player");
+		player.pause();
+		player.currentTime = 0;
+	} 
+	
 var app = {
     // Application Constructor
     initialize: function() {
@@ -8,14 +21,18 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
+	    // Http
+	    document.addEventListener('DOMContentLoaded', this.onDomReady, false);
+        // Phonegap 
+        // document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-	    app.preload();
+	    app.onDomReady();
+	    // Phonegap
         //app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
@@ -29,7 +46,8 @@ var app = {
 
         console.log('Received Event: ' + id);
     },
-    preload: function() {
+    onDomReady: function() {
+	    
 	    var support = { animations : Modernizr.cssanimations },
 			container = document.getElementById( 'container' ),
 			header = container.querySelector( 'header.ip-header' ),
@@ -39,11 +57,11 @@ var app = {
 			animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ];
 	
 		function init() {
+			
 			var onEndInitialAnimation = function() {
 				if( support.animations ) {
 					this.removeEventListener( animEndEventName, onEndInitialAnimation );
-				}
-	
+				}	
 				startLoading();
 			};
 	
@@ -81,7 +99,8 @@ var app = {
 					instance.setProgress( progress );
 	
 					// reached the end
-					if( progress === 1 ) {
+					if ( progress === 1 ) {
+						
 						classie.remove( container, 'loading' );
 						classie.add( container, 'loaded' );
 	
@@ -96,7 +115,7 @@ var app = {
 	
 						};
 	
-						if( support.animations ) {
+						if ( support.animations ) {
 							header.addEventListener( animEndEventName, onEndHeaderAnimation );
 						}
 						else {
@@ -143,6 +162,9 @@ var app = {
 								else {
 									SVGCircleGroupEl.setAttributeNS(null, "transform", "translate(0, " + (gridImgOffset.top + gridImg.offsetHeight/2 < win.height/2 ? win.height : 0) + ")");
 								}
+								
+								// Play the animall sound
+								listenFn( item.getAttribute('data-sound') );
 							}
 						});
 						//---end grid animation----------------------					
@@ -150,6 +172,7 @@ var app = {
 					
 				});
 			};
+			
 			/*
 			// simulate loading something..
 			
